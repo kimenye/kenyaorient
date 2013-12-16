@@ -19,7 +19,9 @@
 <body <?php body_class(); ?>>
 <div id="header" class="row">
   <div class="logo left">
-    <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png"> </a>
+    <a href="<?php echo home_url( '/' ); ?>">
+      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png"> 
+    </a>
   </div>
   <div class="nav right">
     <?php
