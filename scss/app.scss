@@ -190,7 +190,7 @@ a{ background: none;  font-weight: 600; color: #f00; &:hover{ cursor:pointer;};
   }
 }
 
-.contact_us {
+.contact_us, .single-location {
   .search_bar {
     background: #EBEBEB;
     width: 100%; display: block; clear: both; margin-bottom: 20px;
@@ -201,10 +201,19 @@ a{ background: none;  font-weight: 600; color: #f00; &:hover{ cursor:pointer;};
       margin-bottom: 10px;
     }
 
+    form {
+      // margin-bottom: 0px;
+      margin: 0 0 0;
+    }
+
+    .search_instruction {
+      border-right: 1px solid #929497;
+    }
+
     .search_form {
-      border-left: 1px solid #929497;
+      
       padding-top: 10px;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
 
       input {
         margin-bottom: 0px;
@@ -334,6 +343,17 @@ article .large-12 p{ float: left; margin:5px 50px 0 0;}
   border-bottom: 1px solid #aaa;
   margin-bottom: 2em;
 }
-.contact_us {
-  
+
+.banner {
+  background-position: center right;
+  background-size: cover;    
+  position: relative;
+
+  h2.title {
+    position: absolute;
+    color: #ffffff;
+    text-transform: uppercase;
+    bottom: 5px;
+    left: 20px;
+  }
 }
