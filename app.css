@@ -529,10 +529,33 @@ article .large-12 p {
   position: relative;
 }
 /* line 352, scss/app.scss */
-.banner h2.title {
+.banner .page-title {
   position: absolute;
+  left: 20px;
+  bottom: 15px;
+}
+/* line 358, scss/app.scss */
+.banner h2.title {
   color: #ffffff;
   text-transform: uppercase;
-  bottom: 5px;
-  left: 20px;
+}
+/* line 363, scss/app.scss */
+.banner .breadcrumbs > ::before {
+  content: none;
+}
+/* line 367, scss/app.scss */
+.banner .breadcrumbs > * a, .banner .breadcrumbs > * span, .banner .breadcrumbs > * {
+  text-transform: none;
+  color: #ffffff;
+  padding-right: 5px;
+}
+/* line 373, scss/app.scss */
+.banner .breadcrumbs {
+  border: none;
+  background-color: transparent;
+  padding: 0 0 0;
+}
+/* line 378, scss/app.scss */
+.banner .breadcrumbs .trail-browse {
+  display: none;
 }

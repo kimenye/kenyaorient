@@ -349,11 +349,34 @@ article .large-12 p{ float: left; margin:5px 50px 0 0;}
   background-size: cover;    
   position: relative;
 
-  h2.title {
+  .page-title {
     position: absolute;
+    left: 20px;
+    bottom: 15px;
+  }
+
+  h2.title {
     color: #ffffff;
     text-transform: uppercase;
-    bottom: 5px;
-    left: 20px;
+  }
+
+  .breadcrumbs > ::before {
+    content: none;
+  }
+
+  .breadcrumbs>* a, .breadcrumbs>* span, .breadcrumbs>* {
+    text-transform: none;
+    color: #ffffff;
+    padding-right: 5px;
+  }
+
+  .breadcrumbs {
+    border: none;
+    background-color: transparent;
+    padding: 0 0 0;
+
+    .trail-browse {
+      display: none;
+    }
   }
 }
