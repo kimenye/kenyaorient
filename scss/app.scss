@@ -1,10 +1,25 @@
 .row{
   max-width: 80rem;
 }
-#header{ height: 60px; padding: 0px; font-size:0.875rem ; color: #3C3C3B; position: relative;
-  .logo{ float: left; padding: 10px 0 0 0;}
+
+#header{ 
+  height: 60px; 
+  padding: 0px; 
+  font-size:0.875rem; 
+  color: #3C3C3B; 
+  position: relative;
+  
+  .logo{ 
+    float: left; 
+    padding: 10px 0 0 0;
+  }
+  
   .nav{
-    ul{ list-style: none; float:left; margin: 0 20px 0 0;}
+    ul{ 
+      list-style: none;
+      float:left; 
+      margin: 0 20px 0 0;
+    }
     li{ float: left; list-style: none; padding: 10px; height: 60px; &:hover{
       background: #f9f9f9;}
       a{ font-size: 0.875em; color: #3C3C3B; height:50px; padding: 10px 0 0 0; position: relative; display:block; overflow: hidden; width:100%; border-right:1px solid dotted #3C3C3B; &:hover{
@@ -12,13 +27,21 @@
       }
       }
     }
-    .social{ float: left; padding: 15px 10px 0 10px; border-left: 1px solid #ddd; border-right: 1px solid #ddd; height: 60px;
+    li.divider {
+      padding: 0px;
+    }
+    .social{ 
+      float: left; 
+      padding: 15px 10px 0 10px; 
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd; 
+      height: 60px;
       a{ padding: 0 5px;}
     }
     .search{ float: right; position: relative; right: 0; height:60px; width:60px;
       a{
-        position: absolute; height: 100%; width:100%; background: url("../img/search.png") center no-repeat;
-        &:hover{ background: #f9f9f9 url("../img/search.png") center no-repeat;;}
+        position: absolute; height: 100%; width:100%; background: url("images/search.png") center no-repeat;
+        &:hover{ background: #f9f9f9 url("images/search.png") center no-repeat;;}
         img{ width: 32px; height: 32px;}
       }
     }

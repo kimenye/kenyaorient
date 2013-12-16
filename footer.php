@@ -14,27 +14,10 @@
 		      </ul>
 		    </div>
 		    <div class="large-3 columns">
-		      <h6>QUICK LINKS</h6>
-		      <ul class="large-block-grid-2 small-block-grid-2 links">
-		        <li>
-		          <a>Our Team</a>
-		        </li>
-		        <li>
-		          <a>Orient Mobile</a>
-		        </li>
-		        <li>
-		          <a>Carrers</a>
-		        </li>
-		        <li>
-		          <a>Orient Build</a>
-		        </li>
-		        <li>
-		          <a>Products</a>
-		        </li>
-		        <li>
-		          <a>Orient Buglar</a>
-		        </li>
-		      </ul>                
+		      <h6>QUICK LINKS</h6>           
+		      	<?php if ( has_nav_menu( 'footer-menu' ) ) {					
+					wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_class' => 'large-block-grid-2 small-block-grid-2 links') );
+				} ?>
 		    </div>
 		    <div class="large-4 columns">
 		      <p>Sign up to our newsletter:</p>

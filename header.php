@@ -21,4 +21,37 @@
   <div class="logo left">
     <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png"> </a>
   </div>
+  <div class="nav right">
+    <?php
+      // Left Nav Section
+      if ( has_nav_menu( 'header-menu-left' ) ) {
+        wp_nav_menu( array(
+            'theme_location' => 'header-menu-left',
+            'container' => false,
+            'depth' => 0,
+            'items_wrap' => '<ul>%3$s</ul>',
+            'fallback_cb' => false,
+            'walker' => new cornerstone_walker( array(
+                'in_top_bar' => true,
+                'item_type' => 'li'
+            ) ),
+        ));        
+      }
+    ?>
+
+    <!-- Social Media -->
+    <div class="social">
+      <a href>
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fb.png" />
+      </a>
+      <a href="">
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/tw.png">
+      </a>
+    </div>
+
+    <!-- Search -->
+    <div class="search">
+      <a href=""></a>
+    </div>
+  </div>
 </div>
