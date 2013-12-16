@@ -17,49 +17,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <!-- Title Area -->
-    <li class="name">
-    	<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-    </li>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-
-  <section class="top-bar-section">
-    <?php
-      // Left Nav Section
-      if ( has_nav_menu( 'header-menu-left' ) ) {
-          wp_nav_menu( array(
-              'theme_location' => 'header-menu-left',
-              'container' => false,
-              'depth' => 0,
-              'items_wrap' => '<ul class="left">%3$s</ul>',
-              'fallback_cb' => false,
-              'walker' => new cornerstone_walker( array(
-                  'in_top_bar' => true,
-                  'item_type' => 'li'
-              ) ),
-          ) );
-        }
-      ?>
-
-    <?php
-      //Right Nav Section
-      if ( has_nav_menu( 'header-menu-right' ) ) {
-          wp_nav_menu( array(
-              'theme_location' => 'header-menu-right',
-              'container' => false,
-              'depth' => 0,
-              'items_wrap' => '<ul class="right">%3$s</ul>',
-              'fallback_cb' => false,
-              'walker' => new cornerstone_walker( array(
-                  'in_top_bar' => true,
-                  'item_type' => 'li'
-              ) ),
-          ) );
-        }
-      ?>
-  </section>
-</nav>
+<div id="header" class="row">
+  <div class="logo left">
+    <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png"> </a>
+  </div>
+</div>

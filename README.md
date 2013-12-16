@@ -2,6 +2,11 @@
 
 Based on Zurb Foundation 5
 
+You need the parent theme
+
+https://github.com/thewirelessguy/cornerstone
+
+
 
 ## Authors
 	
