@@ -12,6 +12,7 @@ function load_cornerstone_child_scripts() {
 	);
 
 	wp_enqueue_style( 'custom', get_stylesheet_directory_uri() . '/app.css' );
+	wp_enqueue_script('google_maps','https://maps.googleapis.com/maps/api/js?sensor=false');
 }
 
 
