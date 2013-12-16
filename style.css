@@ -1,13 +1,13 @@
 /*
-Theme Name: cornerstonechildtheme
-Description: Child theme for the Cornerstone starter theme
-Author: Stephen Mullen
-Author URI: http: //www.thewirelessguy.co.uk
+Theme Name: kenyaorient
+Description: Kenya Orient Child Theme, based on cornerstone
+Author: Sprout Consulting
+Author URI: http: //sprout.co.ke
 Template: cornerstone
 Version: 1.0
 */
 
-@import url(../cornerstone/style.css);
+/*@import url(../cornerstone/style.css);*/
 
 .alignleft {display: inline; float: left; margin-right: 1.625em;}
 .alignright {display: inline; float: right; margin-left: 1.625em;}

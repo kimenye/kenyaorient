@@ -10,6 +10,9 @@ function load_cornerstone_child_scripts() {
 		false,
 		'all'
 	);
+
+	// wp_enqueue_style()
+	 wp_enqueue_style( 'custom', get_stylesheet_directory_uri() . '/app.css' );
 }
 
 add_action('wp_enqueue_scripts', 'load_cornerstone_child_scripts',50);
