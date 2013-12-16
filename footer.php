@@ -38,10 +38,14 @@
 		      </p>
 		      <ul class="large-block-grid-4 social-icons">
 		        <li>
-		          <a class="facebook" href="#"> <img src="img/fb.png"> </a>
+		          <a class="facebook" href="https://www.facebook.com/kenyaorientinsurance"> 
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fb.png" />
+                          </a>
 		        </li>
 		        <li>
-		          <a class="twitter" href="#"> <img src="img/tw.png"> </a>
+		          <a class="twitter" href="https://twitter.com/KenyaOrient">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/tw.png" />
+                          </a>
 		        </li>
 		      </ul>
 		    </div>

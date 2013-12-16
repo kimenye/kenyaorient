@@ -43,10 +43,10 @@
 
     <!-- Social Media -->
     <div class="social">
-      <a href>
+      <a href="https://www.facebook.com/kenyaorientinsurance">
         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fb.png" />
       </a>
-      <a href="">
+      <a href="https://twitter.com/KenyaOrient">
         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/tw.png">
       </a>
     </div>
