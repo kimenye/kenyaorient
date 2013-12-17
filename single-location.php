@@ -33,7 +33,9 @@
 	</div>
 
 	<!-- Map -->
-	<div id="map" class="map">
+	<div class="row">
+		<div id="map" class="map">
+		</div>
 	</div>
 
 	<!-- Listing -->
