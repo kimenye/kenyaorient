@@ -27,35 +27,34 @@
 						<div class="large-8 large-centered columns">
 							<h5>Related Products</h5>
 							<?php
-								$related = get_posts( array('category_in' => wp_get_post_categories($post->ID), 'numberposts' => 8,
-								'post_not_in' => array($post->ID)));
 
-								// echo "Number of related products ".count($related);
-								if (count($related) > 0) {
+ 								$cats = get_the_category($post->ID);
+ 								
+ 								$ids = $cats[0]->term_id;
+ 								// echo "Term ID : ".$ids;
+
+								$the_query = new WP_Query( array( 'post_type' => 'product', 'cat' => $ids, 'post__not_in' => array($post->ID) ));
+
+								if ($the_query->have_posts()) {
 									?>
 										<ul class="large-block-grid-4 small-block-grid-2 small-centered columns">
 											<?php
-												foreach ($related as $product) {
-												?>
-													<li>
-													</li>
-												<?php
+												while ( $the_query->have_posts() ) {
+													$the_query->the_post();													
+													?>
+														<li>
+															<h5><?php echo get_the_title(); ?></h5>
+														</li>
+													<?php
 												}
 											?>
 										</ul>
-									<?php	
+									<?php		
 								}
 							?>
 						</div>
 					</div>
 				</div>
-<!-- 				$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
-if( $related ) foreach( $related as $post ) {
-setup_postdata($post);
-/*whatever you want to output*/
-}
-wp_reset_postdata(); -->
-
 			</article>		
 		</div>
 	<?php endwhile; ?>
