@@ -1,7 +1,10 @@
 # Kenya Orient Responsive Theme
 
 Based on Zurb Foundation 5
- 
+
+Installation
+-------------
+
 Assuming wordpress is installed.
  
 You need the parent theme
@@ -14,8 +17,17 @@ clone the koil theme https://github.com/kimenye/kenyaorient into your wordpress 
  
    
 Log in to your wordpress app and from the dashboard > appearance > Themes and acvivate kenyaorient.
-DONE!
-   
+
+Install breadcrumb trail plugin
+--------------------------------
+
+This is dependent on whether you will use breadcrumbs.
+
+You will need to download and install the plugin called bredcrumbs trail from http://wordpress.org/plugins/breadcrumb-trail/installation/ 
+Which has installation instructions.
+
+When done go to Dashboard > Plugins and activate breadcrumb trail.
+
 ## Authors
            
   **ZURB**
