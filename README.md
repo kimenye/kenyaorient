@@ -26,7 +26,17 @@ This is dependent on whether you will use breadcrumbs.
 You will need to download and install the plugin called bredcrumbs trail from http://wordpress.org/plugins/breadcrumb-trail/installation/ 
 Which has installation instructions.
 
-When done go to Dashboard > Plugins and activate breadcrumb trail.
+When done go to Dashboard > Plugins and activate Breadcrumb Trail.
+
+Install Multiple Post Thumbnails
+--------------------------------
+
+This is if you want to use multiple images for a single product.
+
+You will need to download and install the plugin called bredcrumbs trail from http://wordpress.org/plugins/multiple-post-thumbnails/installation/ 
+Which has installation instructions.
+
+When done go to Dashboard > Plugins and activate Multiple Post Thumbnails
 
 ## Authors
            
