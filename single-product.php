@@ -43,7 +43,14 @@
 													$the_query->the_post();													
 													?>
 														<li>
-															<h5><?php echo get_the_title(); ?></h5>
+															<a href="<?php echo get_permalink(); ?>">
+															<?php
+																if (class_exists('MultiPostThumbnails')) :
+																MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+																endif;
+																 ?>
+															</a>
+															<h5><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h5>
 														</li>
 													<?php
 												}
