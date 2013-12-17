@@ -32,9 +32,18 @@
 
 								// echo "Number of related products ".count($related);
 								if (count($related) > 0) {
-									foreach ($related as $product) {
-										
-									}
+									?>
+										<ul class="large-block-grid-4 small-block-grid-2 small-centered columns">
+											<?php
+												foreach ($related as $product) {
+												?>
+													<li>
+													</li>
+												<?php
+												}
+											?>
+										</ul>
+									<?php	
 								}
 							?>
 						</div>
