@@ -102,8 +102,16 @@ function product_teaser(){
   <?php
 }
 
+if (class_exists('MultiPostThumbnails')) {
+	new MultiPostThumbnails(array(
+		'label' => 'Secondary Image [Related]',
+		'id' => 'secondary-image',
+		'post_type' => 'product'
+ 	));
+}
 
-add_action( 'wp_head', 'favicon_link' );
+
+add_action('wp_head', 'favicon_link' );
 add_action('wp_enqueue_scripts', 'load_cornerstone_child_scripts',50);
 add_action('init', 'location_register');
 add_action('init', 'product_register');
