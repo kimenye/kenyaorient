@@ -54,10 +54,61 @@ function location_register() {
 	register_post_type( 'location' , $args );
 }
 
+// Products
+function product_register() {
+	$labels = array(
+		'name' => _x('Products', 'post type general name'),
+		'singular_name' => _x('Product', 'post type singular name'),
+		'add_new' => _x('Add New', 'product item'),
+		'add_new_item' => __('Add New Product'),
+		'edit_item' => __('Edit Product Item'),
+		'new_item' => __('New Product Item'),
+		'view_item' => __('View Product Item'),
+		'search_items' => __('Search Products'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/product.png',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'taxonomies' => array('category'),
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'product' , $args );
+}
+
+function admin_init(){
+  add_meta_box("product_teaser-meta", "Product Teaser", "product_teaser", "product", "normal", "low");
+}
+
+function product_teaser(){
+  global $post;
+  $custom = get_post_custom($post->ID);
+  $product_teaser = $custom["product_teaser"][0];
+  ?>
+  <label>Product Teaser</label>
+  <textarea name="product_teaser" cols="50" rows="5"><?php echo $product_teaser ?></textarea>
+  <?php
+}
+
 
 add_action( 'wp_head', 'favicon_link' );
 add_action('wp_enqueue_scripts', 'load_cornerstone_child_scripts',50);
 add_action('init', 'location_register');
+add_action('init', 'product_register');
+add_action('admin_init', 'admin_init');
+
 
 // register_taxonomy("Skills", array("portfolio"), array("hierarchical" =&gt; true, "label" =&gt; "Skills", "singular_label" =&gt; "Skill", "rewrite" =&gt; true));
 register_taxonomy("Branches", array("location"), array("hierarchical" => true, "label" => "Branches", "singular_label" => "Branch", "rewrite" => true));
