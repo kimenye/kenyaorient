@@ -17,7 +17,8 @@
 	<!-- Main Content -->
 	<div id="slider">
         <div class="row">
-        	<div class="">
+        	<!-- Slider -->
+        	<div class="hero-slider">
         		<?php
         			$the_query = new WP_Query( array( 'post_type' => 'vp_orbitslides' ));
         			if ($the_query->have_posts()) {
@@ -51,6 +52,27 @@
 						<?php
     				}
         		?>
+        	</div>
+
+        	<!-- Category Navigator -->
+        	<div class="category-nav">
+        		<div class="row">
+        			<div class="large-8 large-centered columns">
+        				<ul class="large-block-grid-3">
+	        				<?php
+		        				$categories = get_categories( $args );
+
+		        				foreach($categories as $category) {
+		        					?>
+		        						<li>
+		        							<a><?php echo $category->name ?></a>
+		        						</li>
+		        					<?php
+		        				}
+		        			?>
+	        			</dl>
+	        		</div>
+	        	</div>
         	</div>
         </div>
     </div>
