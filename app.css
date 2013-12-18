@@ -14,7 +14,7 @@
 /* line 12, scss/app.scss */
 #header .logo {
   float: left;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 15px;
 }
 /* line 18, scss/app.scss */
 #header .nav ul {
