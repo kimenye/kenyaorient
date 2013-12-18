@@ -22,7 +22,7 @@
         			$the_query = new WP_Query( array( 'post_type' => 'vp_orbitslides' ));
         			if ($the_query->have_posts()) {
         				?>
-        					<ul class="example-orbit" data-orbit data-options="bullets:false;slide_number:false;timer_speed:5000;">
+        					<ul class="example-orbit" data-orbit data-options="bullets:false;slide_number:false;timer:true;timer_speed:5000;">
 	        					<?php
 	        						while ( $the_query->have_posts() ) {
 										?>
@@ -31,8 +31,17 @@
 													$the_query->the_post();
 													$img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), ''.$imgsize.'' ); 
 													$urlimg = $img['0'];
+													$caption = get_post_meta($post->ID, '_sliderCaption', TRUE);
+													$link = get_post_meta($post->ID, '_sliderUrl', TRUE); 
 
-													echo '<img src="'.$urlimg.'" />';
+													?>
+														<div>
+															<h2><?php echo get_the_title(); ?></h2>
+															<p class="hide-for-small"><?php echo $caption ?></p>
+															<a href="<?php echo $link ?>" class="button tiny radius">READ MORE</a>
+														</div>
+														<img src="<?php echo $urlimg ?>" />
+													<?php
 												?>
 											</li>
 										<?php

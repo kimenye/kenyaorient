@@ -57,21 +57,29 @@
 /**/
 #slider{
   .row{
-   max-width:none;
-}
-.example-orbit div{ background: url("../img/slider_bg.png") left top no-repeat;
-color: rgb(255, 255, 255);
-position: absolute;
-width: 705px;
-height: 375px;
+    max-width:none;
+  } 
+  .example-orbit div { 
+    background: url("images/slider_bg.png") left top no-repeat;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    width: 705px;
+    height: 375px;
+    padding: 2rem 4rem;
+    left: 30px;
+    top: 20px;
 
-
-padding: 1rem 4rem;
-
-h2{ color: #fff;}
-p{ font-size: 1.1rem}
+    h2 { 
+      color: #fff;
+    }
+    p { 
+      font-size: 1.1rem;
+      max-width: 85%;
+      text-align: justify;
+    }
+  }
 }
-}
+
 /**/
 .orbit-container .orbit-slides-container{
   overflow: hidden;
