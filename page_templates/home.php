@@ -37,7 +37,7 @@
 													?>
 														<div>
 															<h2><?php echo get_the_title(); ?></h2>
-															<p class="hide-for-small"><?php echo $caption ?></p>
+															<p><?php echo $caption ?></p>
 															<a href="<?php echo $link ?>" class="button tiny radius">READ MORE</a>
 														</div>
 														<img src="<?php echo $urlimg ?>" />
