@@ -59,7 +59,7 @@
   <div class="row">
     <div class="large-10 columns">
       <p>
-        Copyright &copy; Kenya Orient Insurance Limited
+        Copyright &copy; <?php echo date("Y"); ?> Kenya Orient Insurance Limited
       </p>
     </div>
     <div class="large-2 columns">
