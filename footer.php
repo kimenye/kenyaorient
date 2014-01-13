@@ -1,6 +1,14 @@
 <!-- Footer bar -->
 <div class="footer">
-	<div class="row">
+	<div class="top">
+		<div class="link">			
+			<a href="" class="arrow"></a>
+			<div class="text">
+				<a>TOP</a>
+			</div>			
+		</div>
+	</div>
+	<div class="row contacts">		
 		<div class="large-12 columns">
 		  <div class="row">
 		    <div class="large-3 columns">
