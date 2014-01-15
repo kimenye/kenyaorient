@@ -465,6 +465,56 @@ article .large-12 p{ float: left; margin:5px 50px 0 0;}
   }
 }
 
+/** Team **/
+.team {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  h5 {
+    border-bottom: 3px solid #d41117;
+    display: inline-block;
+  }
+
+  img.th {
+    border-bottom: 3px solid #d41117;
+    box-shadow: none;
+  }
+
+  .member {
+    position: relative;
+
+    .overlay {
+      opacity: 0;
+      // background:rgba(212,171,172,.75);
+      background:rgba(0,0,0,.75);
+      text-align:center;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+
+      .bio {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        color: #ffffff;
+
+        h6 {
+          font-weight: 700;   
+          color: #ffffff;        
+        }  
+      }      
+    }
+  }
+
+  .member:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
+}
+
 @media only screen and (max-width: 40em) {
   #slider {
     .example-orbit div {

@@ -54,6 +54,40 @@ function location_register() {
 	register_post_type( 'location' , $args );
 }
 
+// Team
+function team_member_register() {
+	$labels = array(
+		'name' => _x('Team Members', 'post type general name'),
+		'singular_name' => _x('Team Member', 'post type singular name'),
+		'add_new' => _x('Add New', 'team_member item'),
+		'add_new_item' => __('Add New Team Member'),
+		'edit_item' => __('Edit Team Member'),
+		'new_item' => __('New Team Member'),
+		'view_item' => __('View Team Member'),
+		'search_items' => __('Search Team Members'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/team.png',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		// 'taxonomies' => array('category'),
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+  	);	 
+
+	register_post_type( 'team_member' , $args );
+}
+
 // Products
 function product_register() {
 	$labels = array(
@@ -89,8 +123,51 @@ function product_register() {
 }
 
 function admin_init(){
-  add_meta_box("product_teaser-meta", "Product Teaser", "product_teaser", "product", "normal", "low");
+  	add_meta_box("product_teaser-meta", "Product Teaser", "product_teaser", "product", "normal", "low");
+  	add_meta_box("team_role-meta", "Role", "team_role", "team_member", "normal", "low");
 }
+
+function team_role() {
+	global $post;
+	$custom = get_post_custom($post->ID);
+	$team_role = $custom["team_role"][0];
+	// if ( ! $state = get_post_meta( $post->ID, '_cpt_state', true ) ) $state = '';
+	$category = $custom["team_category"][0];
+	$categories = array('BOD' => 'Board of Directors', 'SM' => 'Senior Management');
+	?>
+	<label style="width:100px;display:block;">Role</label>
+	<input name="team_role" value="<?php echo $team_role ?>" />
+	<br /><br />
+	<label style="width:100px;display:block;">Category</label>
+	<select name="team_category">
+		<?php
+			foreach ($categories as $code => $label) {
+				echo '<option value="'.$code.'"';
+        		if ($category == $code) {
+            		echo ' selected="selected"';
+        		}
+        		echo '>' . $label . '</option>';
+			}
+		?>
+	</select>
+	<?php
+}
+
+function team_role_metabox_save($post_id) {
+	if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return; 
+
+
+	// if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return; 
+
+	if( isset( $_POST['team_role'] ) )  
+        update_post_meta( $post_id, 'team_role', wp_kses( $_POST['team_role'] ) );
+
+    if( isset( $_POST['team_category'] ))
+    	update_post_meta( $post_id, 'team_category', wp_kses( $_POST['team_category'] ));
+}
+
+add_action( 'save_post', 'team_role_metabox_save' );  
+
 
 function product_teaser(){
   global $post;
@@ -115,10 +192,12 @@ add_action('wp_head', 'favicon_link' );
 add_action('wp_enqueue_scripts', 'load_cornerstone_child_scripts',50);
 add_action('init', 'location_register');
 add_action('init', 'product_register');
+add_action('init', 'team_member_register');
 add_action('admin_init', 'admin_init');
 
 
 // register_taxonomy("Skills", array("portfolio"), array("hierarchical" =&gt; true, "label" =&gt; "Skills", "singular_label" =&gt; "Skill", "rewrite" =&gt; true));
 register_taxonomy("Branches", array("location"), array("hierarchical" => true, "label" => "Branches", "singular_label" => "Branch", "rewrite" => true));
+register_taxonomy("Roles", array("team_role"), array("hierarchical" => true, "label" => "Roles", "singular_label" => "Role", "rewrite" => true));
 
 ?>
