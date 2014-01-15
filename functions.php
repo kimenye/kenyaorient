@@ -122,6 +122,40 @@ function product_register() {
 	register_post_type( 'product' , $args );
 }
 
+// Job Openings
+function job_register() {
+	$labels = array(
+		'name' => _x('Jobs', 'post type general name'),
+		'singular_name' => _x('Job', 'post type singular name'),
+		'add_new' => _x('Add New', 'job item'),
+		'add_new_item' => __('Add New Job'),
+		'edit_item' => __('Edit Job'),
+		'new_item' => __('New Job'),
+		'view_item' => __('View Job'),
+		'search_items' => __('Search Job'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''	
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/careers.png',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		// 'taxonomies' => array('category'),
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	  ); 
+ 
+	register_post_type( 'job' , $args );
+}
+
 function admin_init(){
 	//add meta boxes
   	add_meta_box("product_teaser-meta", "Product Teaser", "product_teaser", "product", "normal", "low");
@@ -194,6 +228,7 @@ add_action('wp_enqueue_scripts', 'load_cornerstone_child_scripts',50);
 add_action('init', 'location_register');
 add_action('init', 'product_register');
 add_action('init', 'team_member_register');
+add_action('init', 'job_register');
 add_action('admin_init', 'admin_init');
 
 
