@@ -123,6 +123,7 @@ function product_register() {
 }
 
 function admin_init(){
+	//add meta boxes
   	add_meta_box("product_teaser-meta", "Product Teaser", "product_teaser", "product", "normal", "low");
   	add_meta_box("team_role-meta", "Role", "team_role", "team_member", "normal", "low");
 }
