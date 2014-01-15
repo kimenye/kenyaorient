@@ -69,6 +69,20 @@ Home Page
 - Select the previously created home page
 - Save
 
+Our Team
+--------
+- Create a blank page with the Team Page Template
+- Set a featured image (Banner)
+
+Adding a Team Member
+--------------------
+- Go to Team Members > Add New
+- Set the Name of the Team Member
+- Set a featured image
+- Set a Role (e.g. Managing Director)
+- Set a Category (e.g. Board of Directors)
+
+
 
 
 ## Authors

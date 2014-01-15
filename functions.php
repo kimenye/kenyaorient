@@ -161,10 +161,10 @@ function team_role_metabox_save($post_id) {
 	// if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return; 
 
 	if( isset( $_POST['team_role'] ) )  
-        update_post_meta( $post_id, 'team_role', wp_kses( $_POST['team_role'] ) );
+        update_post_meta( $post_id, 'team_role', wp_kses_post( $_POST['team_role'] ) );
 
     if( isset( $_POST['team_category'] ))
-    	update_post_meta( $post_id, 'team_category', wp_kses( $_POST['team_category'] ));
+    	update_post_meta( $post_id, 'team_category', wp_kses_post( $_POST['team_category'] ));
 }
 
 add_action( 'save_post', 'team_role_metabox_save' );  
