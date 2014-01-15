@@ -63,14 +63,16 @@
 		        				$categories = get_categories( $args );
 
 		        				foreach($categories as $category) {
-		        					?>
-		        						<li>
-		        							<a><?php echo $category->name ?></a>
-		        						</li>
-		        					<?php
+		        					if ($category->name != "Uncategorized") {		        					
+			        					?>
+			        						<li>
+			        							<a><?php echo $category->name ?></a>
+			        						</li>
+			        					<?php
+		        					}
 		        				}
 		        			?>
-	        			</dl>
+	        			</ul>
 	        		</div>
 	        	</div>
         	</div>

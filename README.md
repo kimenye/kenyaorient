@@ -38,6 +38,39 @@ Which has installation instructions.
 
 When done go to Dashboard > Plugins and activate Multiple Post Thumbnails
 
+## Content
+
+Menus
+-----
+- Create a Menu called Top Menu
+- Set the location to Header Menu
+
+Permalinks
+----------
+- Setup permalinks to use the post name
+- Settings > Permalinks
+
+Categories
+----------
+- Create 3 categories [Personal Products, Industrial Products, Business Products]
+- Products > Categories
+
+Products
+--------
+- Create a product by going to Products > Add New Product
+- Add a featured image (Top Banner)
+- Add a secondary image (Shown when this is a Related Product)
+- Select a category for the product
+
+Home Page
+---------
+- Create a blank page with the Home Template
+- Go to Appearance > Themes > Customize > Static Front PAge
+- Select the previously created home page
+- Save
+
+
+
 ## Authors
            
   **ZURB**
