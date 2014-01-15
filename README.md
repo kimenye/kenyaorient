@@ -38,12 +38,62 @@ Which has installation instructions.
 
 When done go to Dashboard > Plugins and activate Multiple Post Thumbnails
 
+Install WP Orbit Slider
+-----------------------
+
+Install and activate the WP Orbit Slider from http://virtualpudding.com/.
+
 ## Content
+
+Home Page
+---------
+- Create a blank page with the Home Template
+- Go to Appearance > Themes > Customize > Static Front PAge
+- Select the previously created home page
+- Save
+- Trash the Sample Page
+
+About Us Page
+-------------
+- Create a blank page with the Default Template
+- Set the featured image (Top Banner)
+- Enter the Copy for the About Us page
+
+Contact Us Page
+---------------
+- Go to Locations > Branches
+- Add a New Category
+- Add a name, slug, description (Address)
+- Save
+- Go to Locations > Add New
+- Set the title - Contact Us
+- Select the branches
+- Set the featured image (Top Banner)
 
 Menus
 -----
 - Create a Menu called Top Menu
 - Set the location to Header Menu
+- The links are 
+	- Home (Home Page)
+	- Products
+	- About Us (About Page)
+	- Contact Us (if not available as a location add /location/contact-us/ as a link)
+- Save
+- Create a Menu called Footer Menu
+- Set the location to Footer Menu
+- The links are
+	- About Us
+	- Careers
+	- Our Team
+
+Slides
+------
+- Go to Slides > Add New
+- Set the title Orient Motor Pack
+- Set the featured image (Slider Image)
+- Set the URL link to where it should go when clicked (/product/orient-motor-pack)
+- Set the caption text to what teaser that should be displayed
 
 Permalinks
 ----------
@@ -62,12 +112,6 @@ Products
 - Add a secondary image (Shown when this is a Related Product)
 - Select a category for the product
 
-Home Page
----------
-- Create a blank page with the Home Template
-- Go to Appearance > Themes > Customize > Static Front PAge
-- Select the previously created home page
-- Save
 
 Our Team
 --------
