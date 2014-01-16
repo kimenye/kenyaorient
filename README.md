@@ -126,7 +126,16 @@ Adding a Team Member
 - Set a Role (e.g. Managing Director)
 - Set a Category (e.g. Board of Directors)
 
+Careers Page
+------------
+- Got to Pages > New
+- Create a Careers Page
+- Set a featured image (Top Banner)
+- Use the Careers layout
 
+Job Openings
+------------
+- To add a Job Opening
 
 
 ## Authors

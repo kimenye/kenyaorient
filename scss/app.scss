@@ -159,8 +159,57 @@ p{ font-size: 14px; font-weight: 400;}
 
   .no-opening {
     .drop {
-      border-top: 1px solid #6f6f6f;
+      border-top: 2px solid #A6A8AB;
+      border-bottom: 2px solid #A6A8AB;
+
+      p {
+        text-align: center;
+        margin: 1rem;
+
+        .button {
+          margin: 0;
+        }
+      }
     }
+  }
+
+  .openings {
+    margin-top: 20px;
+
+    
+    h5 {
+      font-weight: bold;
+      color: #19296C;
+    }
+
+    .posting {
+      padding: 30px;
+      border-left: 3px solid #d41117;
+      background-color: #EBEBEB;
+
+      .slim {
+        // padding-left: 0px;
+        // padding-right: 0px;
+      }
+
+      .folder {
+        background: url("images/folder.png") center center no-repeat;
+        width: 60px;
+        height: 53px;
+        display: block;
+      }
+
+      .plus {
+        font-size: 2.5rem;
+        color: #19296C;
+      }
+    }
+  }
+
+  blockquote {
+    border: none;
+    background: url("images/quote.png") center left no-repeat;
+    padding-left: 40px;
   }
 
   ul, ol {
