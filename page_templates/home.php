@@ -81,16 +81,52 @@
 
     <div class="middle_links">
     	<div class="row">
-    		<div class="large-4 columns">
-    			<div class="financials">
+    		<div class="large-4 small-12 columns">
+    			<div class="box">
+    				<div class="row financials">
+    					<div class="large-2 columns">
+    						<i></i>
+    					</div>
+    					<div class="large-8 columns">
+    						<h5 class="title">2013 FINANCIALS</h5>
+    						<p>Click here to see our 2013 financial results</p>
+    					</div>
+    					<div class="large-2 columns">
+    						<span class="plus">+</span>
+    					</div>
+    				</div>
     			</div>
     		</div>
-    		<div class="large-4 columns">
-    			<div class="branches">
+    		<div class="large-4 small-12 columns">
+    			<div class="branches box">
+    				<div class="row">
+	    				<div class="large-2 columns">
+	    					<i class="branches"></i>
+	    				</div>    			
+						<div class="large-8 columns">
+							<h5 class="title">BRANCH NETWORK</h5>
+							<p>Need to some help? Try one of our branches countrywide</p>
+						</div>			
+	    				<div class="large-2 columns">
+	    					<span class="plus">+</span>
+	    				</div>
+	    			</div>
     			</div>
     		</div>
-    		<div class="large-4 columns">
-    			<div class="careers">
+    		<div class="large-4 small-2 columns">
+    			<div class="careers box">
+    				<div class="row">
+	    				<div class="large-2 columns">
+	    					<i class="openings"></i>
+	    				</div>    			
+						<div class="large-8 columns">
+							<h5 class="title">CAREERS</h5>
+							<p>Want to join the team? Check out our openings.</p>
+						</div>			
+	    				<div class="large-2 columns">
+	    					<span class="plus">+</span>
+	    				</div>
+	    			</div>
     			</div>
     		</div>    		
     	</div>

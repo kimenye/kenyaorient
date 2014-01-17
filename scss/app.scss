@@ -1,5 +1,6 @@
 
 $grey: #EBEBEB;
+$red: #d41117;
 
 .row{
   max-width: 80rem;
@@ -154,9 +155,25 @@ p{ font-size: 14px; font-weight: 400;}
     display: none;
   }
 
+  .bottom_links {
+    margin-top: 20px;
+  }
+
+  .middle_links {
+    .box {
+      h5.title {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+        font-weight: 400;
+      }
+    }
+  }
+
   .box {
     background-color: $grey;  
     padding: 15px;
+    border-left: 2px solid $red;
 
     h5.title {
       padding-top: 10px;
@@ -176,8 +193,23 @@ p{ font-size: 14px; font-weight: 400;}
       background: url("images/phone.png") center center no-repeat;
     }
 
+    .financials {
+      i {
+        background: url("images/financials.png") center center no-repeat;  
+      }      
+    }
+
     .news {
       background: url("images/news.png") center center no-repeat; 
+    }
+
+    i.openings {
+      margin-top: 0px;
+      background: url("images/openings.png") center center no-repeat;  
+    }
+
+    i.branches {
+      background: url("images/branches.png") center center no-repeat; 
     }
   }
 }
