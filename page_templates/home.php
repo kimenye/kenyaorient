@@ -12,7 +12,7 @@
 	get_header(); ?>
 
 <!-- main page content -->
-<div class="main">
+<div class="main home">
 
 	<!-- Main Content -->
 	<div id="slider">
@@ -77,6 +77,58 @@
 	        	</div>
         	</div>
         </div>
+    </div>
+
+    <div class="middle_links">
+    	<div class="row">
+    		<div class="large-4 columns">
+    			<div class="financials">
+    			</div>
+    		</div>
+    		<div class="large-4 columns">
+    			<div class="branches">
+    			</div>
+    		</div>
+    		<div class="large-4 columns">
+    			<div class="careers">
+    			</div>
+    		</div>    		
+    	</div>
+    </div>
+
+    <div class="bottom_links">
+    	<div class="row">
+    		<div class="large-6 small-6 columns contact_center">
+    			<div class="box">
+    				<div class="row">
+    					<div class="large-2 columns">
+    						<i class="phone"></i>
+    					</div>
+    					<div class="large-7 columns">
+    						<h5 class="title">KENYA ORIENT CONTACT CENTER</h5>
+    					</div>
+    					<div class="large-3 columns">
+    						<h5 class="title">0202962000</h5>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="large-6 small-6 columns news_and_events">
+    			<div class="box">
+    				<div class="row">
+    					<div class="large-3 columns">
+    						<i class="news"></i>
+    					</div>
+    					<div class="large-7 columns">
+    						<h5 class="title">KENYA ORIENT NEWS AND EVENTS</h5>
+    					</div>
+    					<div class="large-2 columns">
+    						<span class="plus">+</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
 </div>
 

@@ -1,3 +1,6 @@
+
+$grey: #EBEBEB;
+
 .row{
   max-width: 80rem;
 }
@@ -150,6 +153,43 @@ p{ font-size: 14px; font-weight: 400;}
   .orbit-container .orbit-timer {
     display: none;
   }
+
+  .box {
+    background-color: $grey;  
+    padding: 15px;
+
+    h5.title {
+      padding-top: 10px;
+    }
+
+    .plus {
+      font-weight: 300;
+    }
+
+    i {
+      width: 52px;
+      height: 55px;
+      display: block;      
+    }
+
+    .phone {
+      background: url("images/phone.png") center center no-repeat;
+    }
+
+    .news {
+      background: url("images/news.png") center center no-repeat; 
+    }
+  }
+}
+
+/** Common **/
+
+.plus 
+{
+  font-size: 2.5rem;
+  color: #19296C;
+  text-align: center;
+  display: block;
 }
 
 .careers {
@@ -197,12 +237,7 @@ p{ font-size: 14px; font-weight: 400;}
         width: 60px;
         height: 53px;
         display: block;
-      }
-
-      .plus {
-        font-size: 2.5rem;
-        color: #19296C;
-      }
+      }      
     }
   }
 
