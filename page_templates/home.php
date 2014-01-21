@@ -62,6 +62,7 @@
             <div class="large-8 large-centered columns">
                 <ul class="large-block-grid-3">
                     <?php
+                        $args = array('orderby' => 'ID','order' => 'ASC');
                         $categories = get_categories( $args );
 
                         foreach($categories as $category) {
