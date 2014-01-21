@@ -94,7 +94,7 @@
 
                                         if ($the_query->have_posts()) {
                                             ?>
-                                                <ul class="large-block-grid-4 small-block-grid-2 small-centered columns">
+                                                <ul class="large-block-grid-4 small-block-grid-1 small-centered columns">
                                                     <?php
                                                         while ( $the_query->have_posts() ) {
                                                             $the_query->the_post();                                                 
