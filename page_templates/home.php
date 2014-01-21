@@ -88,13 +88,13 @@
                     ?>
                         <div class="category <?php echo $category->slug ?>">
                             <div class="row">
-                                <div class="large-12 columns">                                    
+                                <div class="large-12 columns small-centered">                                    
                                     <?php
                                         $the_query = new WP_Query( array( 'post_type' => 'product', 'cat' => $category->term_id ));
 
                                         if ($the_query->have_posts()) {
                                             ?>
-                                                <ul class="large-block-grid-4 small-block-grid-1 small-centered columns">
+                                                <ul class="large-block-grid-4 small-block-grid-1 columns">
                                                     <?php
                                                         while ( $the_query->have_posts() ) {
                                                             $the_query->the_post();                                                 
