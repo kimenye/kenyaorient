@@ -203,6 +203,15 @@ function team_role_metabox_save($post_id) {
 
 add_action( 'save_post', 'team_role_metabox_save' );  
 
+function product_teaser_save($post_id) {
+	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+
+	if ( isset( $_POST['product_teaser']) )
+		update_post_meta ($post_id, 'product_teaser', wp_kses_post( $_POST['product_teaser'] ));
+}
+
+add_action ('save_post', 'product_teaser_save');
+
 
 function product_teaser(){
   global $post;

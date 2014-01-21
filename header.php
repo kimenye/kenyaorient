@@ -14,6 +14,7 @@
 	
 
   <?php wp_head(); ?>
+  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/javascript/app.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

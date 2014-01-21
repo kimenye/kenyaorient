@@ -52,32 +52,86 @@
 						<?php
     				}
         		?>
-        	</div>
-
-        	<!-- Category Navigator -->
-        	<div class="category-nav">
-        		<div class="row">
-        			<div class="large-8 large-centered columns">
-        				<ul class="large-block-grid-3">
-	        				<?php
-		        				$categories = get_categories( $args );
-
-		        				foreach($categories as $category) {
-		        					if ($category->name != "Uncategorized") {		        					
-			        					?>
-			        						<li>
-			        							<a><?php echo $category->name ?></a>
-			        						</li>
-			        					<?php
-		        					}
-		        				}
-		        			?>
-	        			</ul>
-	        		</div>
-	        	</div>
-        	</div>
+        	</div>        	
         </div>
     </div>
+
+    <!-- Category Navigator -->
+    <div class="category-nav">
+        <div class="row">
+            <div class="large-8 large-centered columns">
+                <ul class="large-block-grid-3">
+                    <?php
+                        $categories = get_categories( $args );
+
+                        foreach($categories as $category) {
+                            if ($category->name != "Uncategorized") {                                   
+                                ?>
+                                    <li>
+                                        <a id="<?php echo $category->slug ?>"><?php echo $category->name ?></a>
+                                    </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category products -->
+    <div class="category-products">
+        <?php
+            foreach($categories as $category) {
+                if (!$category->name != "Uncategorized") {
+                    ?>
+                        <div class="category <?php echo $category->slug ?>">
+                            <div class="row">
+                                <div class="large-12 columns">                                    
+                                    <?php
+                                        $the_query = new WP_Query( array( 'post_type' => 'product', 'cat' => $category->term_id ));
+
+                                        if ($the_query->have_posts()) {
+                                            ?>
+                                                <ul class="large-block-grid-4 small-block-grid-2 small-centered columns">
+                                                    <?php
+                                                        while ( $the_query->have_posts() ) {
+                                                            $the_query->the_post();                                                 
+                                                            ?>
+                                                                <li class="product preview">
+                                                                    <a href="<?php echo get_permalink(); ?>">
+                                                                    <?php
+                                                                        if (class_exists('MultiPostThumbnails')) :
+                                                                        MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+                                                                        endif;
+                                                                         ?>
+                                                                    </a>
+                                                                    <div class="excerpt">
+                                                                        <h5><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h5>
+                                                                        <p><?php echo get_post_meta($post->ID, 'product_teaser', TRUE); ?></p>
+                                                                        <div class="row">
+                                                                            <div class="large-centered columns large-6">
+                                                                                <a href="<?php echo get_permalink(); ?>" class="button tiny radius">READ MORE</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            <?php
+                                                        }
+                                                    ?>
+                                                </ul>
+                                            <?php       
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                }
+            }
+        ?>
+    </div>
+
 
     <div class="middle_links">
     	<div class="row">

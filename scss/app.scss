@@ -1,5 +1,6 @@
 
 $grey: #EBEBEB;
+$dark-grey: #3C3C3B;
 $red: #d41117;
 
 .row{
@@ -210,6 +211,44 @@ p{ font-size: 14px; font-weight: 400;}
 
     i.branches {
       background: url("images/branches.png") center center no-repeat; 
+    }
+  }
+}
+
+.category-products {
+  .category {
+    margin-bottom: 20px;
+  }
+}
+
+.product.preview {
+  
+
+
+  .excerpt {
+    background: $grey;
+    max-width: 280px;
+    padding: 10px;
+    min-height: 180px;
+    border-bottom: 2px solid $red;
+
+    h5 {
+      text-transform: uppercase;
+      margin-top: 0px;
+      font-weight: 400;
+      font-size: 1.05rem;
+    
+      a {
+        color: $dark-grey;
+      }
+    }  
+
+    p {
+      font-weight: 300;
+    }
+
+    .button {
+      margin-bottom: 0px;
     }
   }
 }
