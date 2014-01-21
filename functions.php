@@ -191,9 +191,6 @@ function team_role() {
 function team_role_metabox_save($post_id) {
 	if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return; 
 
-
-	// if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return; 
-
 	if( isset( $_POST['team_role'] ) )  
         update_post_meta( $post_id, 'team_role', wp_kses_post( $_POST['team_role'] ) );
 
