@@ -159,17 +159,19 @@
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/images/branches.png" />
                         </a>
                     </div>
-                    <div class="content small-7 columns">
+                    <div class="content small-7 columns">                    
                         <h3>OUR BRANCHES</h3>
                         <p>Need to some help? Try one of our branches countrywide.</p>
                     </div>
-                     <a href="" class="open small-2 columns"> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/open.png"></a>
+                     <a href="location/contact-us/" class="open small-2 columns"> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/open.png"></a>
                   </div>
                 </li>
                 <li>
                 <div class="wrapper">
                     <div class="img small-3 columns">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/careers.png">
+                        <a href="/careers/">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/careers.png">
+                        </a>
                     </div>
                     <div class="content small-7 columns">
                         <h3>CAREERS</h3>
