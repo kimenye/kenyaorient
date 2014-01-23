@@ -100,19 +100,21 @@
                                                             $the_query->the_post();                                                 
                                                             ?>
                                                                 <li class="product preview">
-                                                                    <a href="<?php echo get_permalink(); ?>">
-                                                                    <?php
-                                                                        if (class_exists('MultiPostThumbnails')) :
-                                                                        MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
-                                                                        endif;
-                                                                         ?>
-                                                                    </a>
-                                                                    <div class="excerpt">
-                                                                        <h5><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h5>
-                                                                        <p><?php echo get_post_meta($post->ID, 'product_teaser', TRUE); ?></p>
-                                                                        <div class="row">
-                                                                            <div class="large-centered columns large-6">
-                                                                                <a href="<?php echo get_permalink(); ?>" class="button tiny radius">READ MORE</a>
+                                                                    <div class="alignment">
+                                                                        <a href="<?php echo get_permalink(); ?>">
+                                                                        <?php
+                                                                            if (class_exists('MultiPostThumbnails')) :
+                                                                            MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+                                                                            endif;
+                                                                             ?>
+                                                                        </a>
+                                                                        <div class="excerpt">
+                                                                            <h5><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h5>
+                                                                            <p><?php echo get_post_meta($post->ID, 'product_teaser', TRUE); ?></p>
+                                                                            <div class="row">
+                                                                                <div class="large-centered columns large-6">
+                                                                                    <a href="<?php echo get_permalink(); ?>" class="button tiny radius">READ MORE</a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -133,93 +135,83 @@
         ?>
     </div>
 
-
-    <div class="middle_links">
-    	<div class="row">
-    		<div class="large-4 small-12 columns">
-    			<div class="box">
-    				<div class="row financials">
-    					<div class="large-2 columns">
-    						<i></i>
-    					</div>
-    					<div class="large-8 columns">
-    						<h5 class="title">2013 FINANCIALS</h5>
-    						<p>Click here to see our 2013 financial results</p>
-    					</div>
-    					<div class="large-2 columns">
-    						<span class="plus">+</span>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="large-4 small-12 columns">
-    			<div class="branches box">
-    				<div class="row">
-	    				<div class="large-2 columns">
-	    					<i class="branches"></i>
-	    				</div>    			
-						<div class="large-8 columns">
-							<h5 class="title">BRANCH NETWORK</h5>
-							<p>Need to some help? Try one of our branches countrywide</p>
-						</div>			
-	    				<div class="large-2 columns">
-	    					<span class="plus">+</span>
-	    				</div>
-	    			</div>
-    			</div>
-    		</div>
-    		<div class="large-4 small-2 columns">
-    			<div class="careers box">
-    				<div class="row">
-	    				<div class="large-2 columns">
-	    					<i class="openings"></i>
-	    				</div>    			
-						<div class="large-8 columns">
-							<h5 class="title">CAREERS</h5>
-							<p>Want to join the team? Check out our openings.</p>
-						</div>			
-	    				<div class="large-2 columns">
-	    					<span class="plus">+</span>
-	    				</div>
-	    			</div>
-    			</div>
-    		</div>    		
-    	</div>
+    <div id="info" class="row">
+        <div class="large-12 columns small-12 small-centered">
+            <ul class="large-block-grid-3 small-block-grid-1">
+                <li>
+                    <div class="wrapper">
+                        <div class="img small-3 columns">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/financials.png">
+                        </div>
+                        <div class="small-7 columns">
+                            <div class="content">
+                                <h3>2013 FINANCIAL</h3>
+                                <p>Click here to see our 2013 financial results.</p>
+                            </div>
+                        </div>
+                        <a href="" class="open small-2 columns"> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/open.png"></a>
+                    </div>                
+                </li>
+                <li>
+                <div class="wrapper">
+                    <div class="img small-3 columns">
+                        <a href="location/contact-us/">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/branches.png" />
+                        </a>
+                    </div>
+                    <div class="content small-7 columns">
+                        <h3>OUR BRANCHES</h3>
+                        <p>Need to some help? Try one of our branches countrywide.</p>
+                    </div>
+                     <a href="" class="open small-2 columns"> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/open.png"></a>
+                  </div>
+                </li>
+                <li>
+                <div class="wrapper">
+                    <div class="img small-3 columns">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/careers.png">
+                    </div>
+                    <div class="content small-7 columns">
+                        <h3>CAREERS</h3>
+                        <p>Want to join the team? Check out our openings.</p>
+                    </div>
+                     <a href="/careers" class="open small-2 columns"> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/open.png"></a>
+                 </div>   
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <div class="bottom_links">
-    	<div class="row">
-    		<div class="large-6 small-6 columns contact_center">
-    			<div class="box">
-    				<div class="row">
-    					<div class="large-2 columns">
-    						<i class="phone"></i>
-    					</div>
-    					<div class="large-7 columns">
-    						<h5 class="title">KENYA ORIENT CONTACT CENTER</h5>
-    					</div>
-    					<div class="large-3 columns">
-    						<h5 class="title">0202962000</h5>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="large-6 small-6 columns news_and_events">
-    			<div class="box">
-    				<div class="row">
-    					<div class="large-3 columns">
-    						<i class="news"></i>
-    					</div>
-    					<div class="large-7 columns">
-    						<h5 class="title">KENYA ORIENT NEWS AND EVENTS</h5>
-    					</div>
-    					<div class="large-2 columns">
-    						<span class="plus">+</span>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
+    <div id="notice" class="row">
+        <div class="large-12 columns small-12 columns small-centered">
+            <ul class="large-block-grid-2 small-block-grid-1">
+                <li>
+                    <div class="wrapper">
+                        <div class="img small-3 columns">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/phone.png">
+                        </div>
+                        <div class="content small-6 columns">
+                            <h3>KENYA ORIENT CONTACT CENTER</h3>                        
+                        </div>
+                        <div class="small-3 columns">
+                            <p>020296200</p>                        
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper">
+                        <div class="img small-3 columns">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/broadcast.png">
+                        </div>
+                        <div class="content small-6 columns">
+                            <h3>KENYA ORIENT NEWS AND EVENTS</h3>                            
+                        </div>                       
+                        <a href="" class="open small-2 columns">  <img src="<?php echo get_stylesheet_directory_uri() ?>/images/open.png"></a>                    
+                    </div>
+                </li>
+
+            </ul>
+        </div>
     </div>
 </div>
 
