@@ -13,6 +13,9 @@ get_header(); ?>
 
 
 <div class="main products">
+	<!-- Inner Page Banner -->
+	<?php get_template_part( 'banner' ); ?>
+
 	<?php
         $args = array('orderby' => 'ID','order' => 'ASC');
         $categories = get_categories( $args );
