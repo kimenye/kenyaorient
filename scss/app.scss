@@ -57,7 +57,7 @@ $red: #d41117;
       height: 60px;
       a{ padding: 0 5px;}
     }
-    .search{ float: right; position: relative; right: 0; height:60px; width:60px;
+    .search{ display:none; float: right; position: relative; right: 0; height:60px; width:60px;
       a{
         position: absolute; height: 100%; width:100%; background: url("images/search.png") center no-repeat;
         &:hover{ background: #f9f9f9 url("images/search.png") center no-repeat;;}
@@ -69,6 +69,7 @@ $red: #d41117;
 }
 /**/
 #slider{
+  min-height: 520px;
   .row{
     max-width:none;
   }
@@ -748,6 +749,7 @@ article .large-12 p{ float: left; margin:5px 50px 0 0;}
 
 @media only screen and (max-width: 40em) {
   #slider {
+    min-height: 280px;
     .example-orbit div {
       top: 0px;
       left: 0px;
