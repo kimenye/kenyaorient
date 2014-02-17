@@ -72,15 +72,15 @@
 	?>
 
 	<script type="text/javascript">
-		function initialize() {
-        	var mapOptions = {
-          		center: new google.maps.LatLng(1.2667, 36.8),
-          		zoom: 6
-        	};
-        	var map = new google.maps.Map(document.getElementById("map"),
-            	mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+		// function initialize() {
+  //       	var mapOptions = {
+  //         		center: new google.maps.LatLng(1.2667, 36.8),
+  //         		zoom: 6
+  //       	};
+  //       	var map = new google.maps.Map(document.getElementById("map"),
+  //           	mapOptions);
+  //     	}
+  //     	google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
 </div>
 <?php get_footer(); ?>
