@@ -144,7 +144,7 @@ function job_register() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		'menu_icon' => get_stylesheet_directory_uri() . '/images/careers.png',
+		// 'menu_icon' => get_stylesheet_directory_uri() . '/images/careers.png',
 		'rewrite' => true,
 		'capability_type' => 'post',
 		// 'taxonomies' => array('category'),

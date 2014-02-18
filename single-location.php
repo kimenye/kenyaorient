@@ -59,7 +59,18 @@
                 					</div>
                 					<div class="content small-9 columns">
 					                    <h3><?php echo $branch->name ?></h3>
-					                    <p><?php echo $branch->description ?></p>
+					                    <p>
+					                    	<?php echo $branch->description ?>
+					                    	<?php
+						                    	if (function_exists('get_terms_meta'))
+												{
+												    $metaValue = get_terms_meta($branch->term_id, 'email');
+												    if ($metaValue != "")
+												    	echo "<br />Email: <a href=mailto:".$metaValue.">".$metaValue[0]."</a>";
+												}
+						                    ?>
+					                    </p>
+					                    
 					                </div>
 								</div>
 							</li>
