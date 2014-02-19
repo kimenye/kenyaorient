@@ -15,7 +15,7 @@
 		      <ul class="vcard">
 		        <li>Corporate Headquarters</li>
 		        <li class="street-address">6th Floor, Nairobi, Kenya</li>
-		        <li class="street-address">CONTACT. 020 2962000</li>
+		        <li class="street-address">CONTACT. 020 2961000</li>
 		        <li class="street-address">Email:
 		          <a href="mailto:info@korient.co.ke">info@korient.co.ke</a>
 		        </li>                
@@ -72,13 +72,13 @@
     </div>
     <div class="large-2 columns">
       <p>
-        <a>
+        <!-- <a>
           Terms
         </a>
         &nbsp;|&nbsp;
         <a>
           Privacy
-        </a>
+        </a> -->
       </p>
     </div>
   </div>

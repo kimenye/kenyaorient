@@ -47,37 +47,61 @@
 		// print_r($term_list);
 		?>
 		<div class="locations row">
-			<h6><?php echo count($branches).' Branches'; ?></h6>
-			<ul class="large-block-grid-4 small-block-grid-1">
-				<?php
-					foreach ($branches as $branch) {
-						?>
-							<li>
-								<div class="wrapper">
-									<div class="img small-3 columns">
-                    					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/locations.png" />                    					
-                					</div>
-                					<div class="content small-9 columns">
-					                    <h3><?php echo $branch->name ?></h3>
-					                    <p>
-					                    	<?php echo $branch->description ?>
-					                    	<?php
-						                    	if (function_exists('get_terms_meta'))
-												{
-												    $metaValue = get_terms_meta($branch->term_id, 'email');
-												    if ($metaValue != "")
-												    	echo "<br />Email: <a href=mailto:".$metaValue.">".$metaValue[0]."</a>";
-												}
-						                    ?>
-					                    </p>
-					                    
-					                </div>
-								</div>
-							</li>
-						<?php
-					}
-				?>
-			</ul>
+			<div class="large-9 columns">
+				<h6><?php echo count($branches).' Branches'; ?></h6>
+				<ul class="large-block-grid-3 small-block-grid-1">
+					<?php
+						foreach ($branches as $branch) {
+							?>
+								<li>
+									<div class="wrapper">
+										<div class="img small-3 columns">
+	                    					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/locations.png" />                    					
+	                					</div>
+	                					<div class="content small-9 columns">
+						                    <h3><?php echo $branch->name ?></h3>
+						                    <p>
+						                    	<?php echo $branch->description ?>
+						                    	<?php
+							                    	if (function_exists('get_terms_meta'))
+													{
+													    $metaValue = get_terms_meta($branch->term_id, 'email');
+													    if ($metaValue != "")
+													    	echo "<br />Email: <a href=mailto:".$metaValue.">".$metaValue[0]."</a>";
+													}
+							                    ?>
+						                    </p>
+						                    
+						                </div>
+									</div>
+								</li>
+							<?php
+						}
+					?>
+				</ul>
+			</div>
+			<div class="large-3 columns">
+				
+				<div class="contact_center">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/contact_center.png" />
+				
+					<ul class="vcard">
+						<li>
+							Kenya Orient Contact Center
+						</li>
+						<li class="street-address">
+							Tel:
+							<span class="tel">
+								020 2962000
+							</span>
+						</li>
+						<li class="street-address">
+							Email:
+							<a href="mailto:info@korient.co.ke">info@korient.co.ke</a>
+						</li>
+					</ul>
+				</div> 
+			</div>
 		</div>
 		<?php
 	?>

@@ -14,6 +14,7 @@
 	
 
   <?php wp_head(); ?>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/javascript/app.js"></script>
 </head>
 
