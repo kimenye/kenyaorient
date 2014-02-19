@@ -196,7 +196,7 @@
                             <h3>KENYA ORIENT CONTACT CENTER</h3>                        
                         </div>
                         <div class="small-3 columns">
-                            <p>020296200</p>                        
+                            <p>020 2962000</p>                        
                         </div>
                     </div>
                 </li>
