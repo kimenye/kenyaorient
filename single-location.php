@@ -97,7 +97,7 @@
 						</li>
 						<li class="street-address">
 							Email:
-							<a href="mailto:info@korient.co.ke">info@korient.co.ke</a>
+							<a href="mailto:customerservice@korient.co.ke">customerservice@korient.co.ke</a>
 						</li>
 					</ul>
 				</div> 
