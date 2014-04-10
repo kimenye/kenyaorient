@@ -24,7 +24,7 @@ get_header(); ?>
 
 	<div class="row no-opening">
 		<div class="large-10 large-centered columns drop">
-			<p>Don't see an opening? Just drop your CV and who knows, we might call you really soon. <a class="button tiny">Drop CV</a></p>
+			<p>Don't see an opening? Just drop your CV and who knows, we might call you really soon. <a href="mailto:hr@korient.co.ke" class="button tiny">Drop CV</a></p>
 		</div>
 	</div>	
 
@@ -56,7 +56,9 @@ get_header(); ?>
 															<h3><?php echo get_the_title() ?></h3>
 														</div>
 														<div class="large-2 columns">
-															<span class="plus">+</span>
+															<a href="<?php echo get_permalink(); ?>">
+																<span class="plus">+</span>
+															</a>
 														</div>
 													</div>												
 												</div>
