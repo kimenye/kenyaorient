@@ -20,31 +20,18 @@
 
 <body <?php body_class(); ?>>
 <div id="header" class="row">
-  <div class="logo left">
-    <a href="<?php echo home_url( '/' ); ?>">
-      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png"> 
-    </a>
+  <div class="large-4 columns">
+    <div class="logo">
+      <a href="<?php echo home_url( '/' ); ?>">
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/kpa-logo.jpg" /> 
+      </a>
+    </div>
   </div>
-  <div class="nav right">
-    <?php
-      // Left Nav Section
-      if ( has_nav_menu( 'header-menu-left' ) ) {
-        wp_nav_menu( array(
-            'theme_location' => 'header-menu-left',
-            'container' => false,
-            'depth' => 0,
-            'items_wrap' => '<ul>%3$s</ul>',
-            'fallback_cb' => false,
-            'walker' => new cornerstone_walker( array(
-                'in_top_bar' => true,
-                'item_type' => 'li'
-            ) ),
-        ));        
-      }
-    ?>
+  <div class="large-8 columns">
 
     <!-- Social Media -->
-    <div class="social">
+    <div class="social right">
+      <p>For additional information call: +254 020 2725309 </p>
       <a href="https://www.facebook.com/kenyaorientinsurance">
         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fb.png" />
       </a>
@@ -52,10 +39,28 @@
         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/tw.png">
       </a>
     </div>
+  </div>
+</div>
 
-    <!-- Search -->
-    <div class="search">
-      <a href=""></a>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="main nav">
+      <?php
+        // Left Nav Section
+        if ( has_nav_menu( 'header-menu-left' ) ) {
+          wp_nav_menu( array(
+              'theme_location' => 'header-menu-left',
+              'container' => false,
+              'depth' => 0,
+              'items_wrap' => '<ul>%3$s</ul>',
+              'fallback_cb' => false,
+              'walker' => new cornerstone_walker( array(
+                  'in_top_bar' => true,
+                  'item_type' => 'li'
+              ) ),
+          ));        
+        }
+      ?>
     </div>
   </div>
 </div>

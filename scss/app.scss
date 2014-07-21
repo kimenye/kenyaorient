@@ -4,11 +4,15 @@ $dark-grey: #3C3C3B;
 $red: #d41117;
 
 .row{
-  max-width: 80rem;
+  max-width: 64rem;
 }
 
 body, h1, h2, h3, h4, h5, h6, button, .button {
   font-family: 'Lato', sans-serif;
+}
+
+body {
+  border-top: 5px solid #0c53a3;
 }
 
 .contact_center {
@@ -24,15 +28,37 @@ body, h1, h2, h3, h4, h5, h6, button, .button {
 }
 
 #header{
-  height: 60px;
+  min-height: 90px;
   padding: 0px;
   font-size:0.875rem;
   color: #3C3C3B;
   position: relative;
+  border-bottom: 2px solid #cccccc;
+
+
+  .social{
+    padding: 2rem 0px;
+    // border-left: 1px solid #ddd;
+    // border-right: 1px solid #ddd;
+
+    p {
+      color: #979797;
+      font-size: .9rem;
+      font-weight: 100;
+      display: inline-block;
+    }
+    height: 60px;
+    a { 
+      padding: 0 5px; 
+      img {
+        width: 18px;
+      }
+    }
+  }
 
   .logo{
-    float: left;
-    padding: 10px 0 0 15px;
+    // float: left;
+    padding: 10px 0 0 0px;
   }
 
   .nav{
@@ -57,14 +83,7 @@ body, h1, h2, h3, h4, h5, h6, button, .button {
     li.divider {
       padding: 0px;
     }
-    .social{
-      float: left;
-      padding: 15px 10px 0 10px;
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
-      height: 60px;
-      a{ padding: 0 5px;}
-    }
+    
     .search{ display:none; float: right; position: relative; right: 0; height:60px; width:60px;
       a{
         position: absolute; height: 100%; width:100%; background: url("images/search.png") center no-repeat;
